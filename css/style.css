@@ -1,0 +1,889 @@
+/*
+  Author: Divine-Store
+  Template: Masnoo 
+  Version: 1.0
+  URL: http://themeforest.net/user/divine-store/
+*/
+
+/* TABLE OF CONTENTS
+
+  1. Import section
+  2. Basic styles
+  3. Typography
+  4. Breakpoint for high-res devices
+  5. Header
+  6. Product
+  7. Photo
+  8. Icons
+  9. Subscribe
+  10. Promo
+  11. Pricing table
+  12. Join now
+  13. Clients
+  14. Projects
+  15. Testimonials  
+  16. Contact
+  17. Footer
+  18. Breakpoints
+
+*/
+
+
+
+/* 1. IMPORT SECTION */
+
+  @import url("bootstrap.css");
+  @import url('https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+  @import url("font-awesome.min.css");
+  @import url("slick.css");
+  @import url("featherlight.css");
+  @import url("jquery.wordrotator.css");
+  @import url("animate.min.css");
+
+
+
+/* 2. BASIC STYLES */
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    font: 16px/1.5 "Poppins", "Century Gothic", "Trebuchet MS", Helvetica, sans-serif;
+    background-color: #fff;
+    color: #000;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  a { 
+    color: black;
+    transition: all 0.125s ease-in-out 0s;
+    -moz-transition: all 0.125s ease-in-out 0s;
+    -webkit-transition: all 0.125s ease-in-out 0s;
+    -o-transition: all 0.125s ease-in-out 0s;
+    -ms-transition: all 0.125s ease-in-out 0s;
+  }
+
+  a:hover {
+    color: #fd7f24;
+  }
+
+  a, a:hover, a:active, a:focus {
+    outline: 0;
+    border: 0;
+    text-decoration: none;
+  }
+
+  .ds-float-left {
+    float: left;
+  }
+
+  .ds-float-right {
+    float: right;
+  }
+  
+  .ds-block-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .ds-show {
+    display: block !important;
+  }
+  
+  .ds-hide {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  .ds-preloader {
+    background: #f2f3f7 url('../img/preloader.svg') no-repeat center center;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
+  }
+  .img-prod img{
+    text-align: center;
+    width: 300px;
+    height: 300px;
+  }
+
+
+
+/* 3. TYPOGRAPHY */
+
+  p {
+    line-height: 1.5;
+  }
+    
+  .ds-text-uppercase {
+    text-transform: uppercase;
+  }
+
+  .ds-text-center {
+    text-align: center;
+  }
+
+  .ds-text-left {
+    text-align: left;
+  }
+
+  .ds-text-right {
+    text-align: right;
+  }
+
+  .ds-text-justify {
+    text-align: justify;
+  }
+
+  .ds-text-underline {
+    text-decoration: underline;
+  }
+
+/* 5. HEADER */
+
+  header {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: #636773 !important;
+  }
+  
+  header > .container {
+    position: relative;
+    padding: 45px 0 75px;
+    width: 90%;
+  }
+
+  .ds-overlay {
+    width: 100%;
+    height: 100%;   
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .ds-background-repeat {
+      background-repeat: repeat;
+  }
+  
+  .ds-background-no-repeat {
+    background-repeat: no-repeat;
+  }
+  
+  .ds-overlay-none {
+    display: none;
+    visibility: hidden;
+  }
+  
+  .ds-overlay-image {
+    background-image: url('../img/lines.png');
+    background-repeat: repeat;
+  }
+  
+  
+  .ds-overlay-gradient {
+    background: -moz-linear-gradient(215deg,  rgba(0,204,255,0.8) 0%, rgba(196,255,0,0.8) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(0,204,255,0.8)), color-stop(100%,rgba(196,255,0,0.8))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(215deg,  rgba(0,204,255,0.8) 0%,rgba(196,255,0,0.8) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(215deg,  rgba(0,204,255,0.8) 0%,rgba(196,255,0,0.8) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(215deg,  rgba(0,204,255,0.8) 0%,rgba(196,255,0,0.8) 100%); /* IE10+ */
+    background: linear-gradient(215deg,  rgba(0,204,255,0.8) 0%,rgba(196,255,0,0.8) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ccff', endColorstr='#c4ff00',GradientType=1 ) progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/1x1.png'); /* IE6-9 fallback on horizontal gradient */
+    pointer-events:none;
+  }
+  
+  
+  .ds-logo a {
+    display: inline-block;
+  }
+  
+  .ds-logo img {
+    vertical-align: bottom;
+  }
+  
+  .ds-logo-1x {
+    display: block;
+  }
+  
+  .ds-logo-2x {
+    display: none;
+  }
+
+  .ds-title { 
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  .ds-title h1 {
+    font-size: 54px;
+    font-weight: 700;
+    color: #2b2f3e;
+
+  }
+  
+  .ds-title span {
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .ds-title-paragraph {
+    margin: auto;
+    max-width: 58ch;
+    margin-top: 25px;
+  }
+
+  .ds-title-paragraph p {
+    text-align: justify;
+    color: #737c85;
+  }
+
+  .ds-buttons {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .ds-button-left {
+    height: 60px;
+    font-size: 20px;
+    line-height: 60px;
+    text-align: center;
+    display: inline-block;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0 25px;
+  }
+  .ds-button-right {
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    display: inline-block;
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 25px;
+    padding: 0 25px;
+  }
+
+  .ds-button-left {
+    background-color: #fd7f24;
+  }
+
+  .ds-button-left i {
+    color: #fff;
+    margin-left: 5px;
+  }
+
+  .ds-button-left:hover,
+  .ds-button-left:focus {
+    color: #fff;
+    background-color: #2b2f3e;
+  }
+
+  .ds-button-left:hover i {
+    color: #fff;
+  }
+
+  .ds-button-right {
+    color: rgb(67, 67, 67);
+  }
+
+  .ds-button-right:hover, 
+  .ds-button-right:focus {
+    color: #2b2f3e;
+    text-decoration: underline;
+  }
+
+  .ds-button-center{
+    position: fixed;
+    top:50%;
+    right: 20px;
+    z-index: 1;
+  }
+  .ds-button-center a, 
+  .ds-button-center a:focus{
+  text-transform: uppercase;
+  }
+
+
+  .ds-scroll-down {
+    margin-top: 100px;
+  }
+
+  .ds-scroll-down a,
+  .ds-scroll-down a:focus {
+    width: 45px;
+    height: 45px;
+    display: block;
+    -webkit-border-radius: 45px;
+    -moz-border-radius: 45px;
+    border-radius: 45px;
+    text-align: center;
+    line-height: 41px;
+    color: #fff;
+    background-color: gray;
+    border: 2px solid gray;
+    margin: 0 auto;
+  }
+
+  .ds-scroll-down a:hover {
+    color: #fff;
+    background-color: #2b2f3e;
+    border: 2px solid #2b2f3e;
+  }
+
+/* 8. ICONS */
+  
+  .icons {
+    padding: 80px 0;
+    background-color: #f2f3f7;
+  }
+
+  .ds-icons-title {
+    margin-bottom: 50px;
+  }
+   .ds-icons-title h2{ 
+    font-weight: 700;
+    font-size: 34px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .ds-icons-title h2 strong {
+	font-weight: 300;
+    font-size: 2.5em;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .ds-icons-title p {
+	text-align: center;
+	font-weight: 300;
+    font-size: 20px;
+	color:#737c85;
+  }
+  .ds-icon-box > div {
+    background-color: #fff;
+    border: 2px solid #fff;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: left;
+    transition: all 0.125s ease-in-out 0s;
+    -moz-transition: all 0.125s ease-in-out 0s;
+    -webkit-transition: all 0.125s ease-in-out 0s;
+    -o-transition: all 0.125s ease-in-out 0s;
+    -ms-transition: all 0.125s ease-in-out 0s;
+	margin-top: 30px;
+	font-weight:500;
+  }
+
+  .ds-icon-box span {
+    font-size: 45px;
+  }
+
+  .ds-icon-box h4 {
+    font-weight: 300;
+    font-size: 1.25em;
+    margin: 5px 0 0;
+  }
+
+  .ds-icon-box p {
+    font-size: 16px;
+    margin: 15px 0 0;
+	color:#737c85;
+	line-height:30px;
+	font-weight:296;
+  }
+
+  .ds-icon-box-one span,
+  .ds-icon-box-one h4 {
+    color: #33c;
+  }
+  .ds-icon-box-two span,
+  .ds-icon-box-two h4 {
+    color: 33adff;
+  }
+  .ds-icon-box-three span,
+  .ds-icon-box-three h4 {
+    color: #33c;
+  }
+  .ds-icon-box-four span,
+  .ds-icon-box-four h4 {
+    color: #9677df;
+  } 
+
+/* 15. JOIN NOW */
+  
+  .join-now {
+    width: 100%;
+    padding: 80px 0 70px;
+    background-color: #f2f3f7;
+  }
+
+  .orcamento{    
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+  }
+
+  .calc{ 
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(177, 177, 177, 0.6);
+    padding: 40px 0;
+    margin-right: 15px;
+  }
+
+  .cont{
+    background-color: rgba(51, 51, 51, 0.6);
+    padding: 40px 0;
+    margin-left: 15px;
+  }
+
+  .resultado{
+    width: 300px;
+    background-color: rgb(255, 254, 243);
+    color: black;
+    font-weight: 500;
+    padding: 20px;
+    margin: auto;
+    text-align: left;
+  }
+
+  .resultado h5{
+ 
+    margin: 0; 
+    font-size:15px
+  }
+
+  .ds-join-now-form{
+    position: relative;
+  }
+
+  .ordem{
+    position: absolute;
+    top: -85px;
+    left: -15px;
+    font-size: 30px;
+    font-weight: 600;
+    width: 95px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 5px red solid;
+    border-radius: 50%;
+  }
+
+  
+
+  .ds-join-now-title h2 {
+    font-weight: 700;
+    font-size: 2.5em;
+    margin: 0;
+    text-align: center;
+  }
+
+  .ds-join-now-title h2 strong {
+    font-weight: 600;
+  }
+
+  .ds-join-now-title p {
+    text-align: center;
+    margin-bottom: 75px;
+	  font-size:20px;
+	  color:#737c85;
+  }
+
+  .ds-join-now-form h3{
+    text-transform: uppercase;
+    font-size: 25px;
+  }
+
+  .ds-join-now-form input:focus {
+    outline: 0;
+  }
+
+  
+
+  .ds-join-now-form input[type=text],
+  .ds-join-now-form input[type=number],
+  .ds-join-now-form input[type=submit],
+  .ds-join-now-form input[type=reset],
+  .ds-join-now-form input[type=tel],
+  .ds-join-now-form input[type=email] {
+    margin-bottom: 20px;
+    height: 60px;
+    line-height: 60px;  
+    display: inline-block;
+    transition: all 0.125s ease-in-out 0s;
+    -moz-transition: all 0.125s ease-in-out 0s;
+    -webkit-transition: all 0.125s ease-in-out 0s;
+    -o-transition: all 0.125s ease-in-out 0s;
+    -ms-transition: all 0.125s ease-in-out 0s;  
+  }
+  .ds-join-now-form textarea{
+    width: 90%;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    padding: 20px;
+  }
+  .ds-join-now-form input[type=number],
+  .ds-join-now-form input[type=tel],
+  .ds-join-now-form input[type=text],
+  .ds-join-now-form input[type=email]{
+    width: 90%;
+    background-color: #fff;
+    margin-top: 20px;
+    color: #747d93;
+    font-weight: 300;
+    padding: 0 20px;
+    border: 2px solid #fff;
+  }
+
+  .ds-join-now-form input[type=number]:focus,
+  .ds-join-now-form input[type=tel]:focus,
+  .ds-join-now-form input[type=text]:focus,
+  .ds-join-now-form input[type=email]:focus,
+  .ds-join-now-form textarea:focus {
+    border: 2px solid #d9dade;
+  }
+
+  .ds-join-now-form input[type=submit],
+  .ds-join-now-form input[type=reset] {
+    text-align: center;
+    background-color: rgb(241, 177, 71);
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0 40px;
+    border: 0;
+  }
+
+  .ds-join-now-form input[type=submit]:hover, .ds-join-now-form input[type=reset]:hover {
+    color: rgb(255, 255, 255);
+    background-color: #2b2f3e;
+  }
+
+  .ds-join-now-message {
+    height: 15px;
+    line-height: 15px;
+    padding: 0 20px;
+    color: #747d93;
+    font-size: 0.9em;
+    margin-top: 15px;
+  }
+
+  .ds-join-now-message i {
+    margin-right: 5px;
+  }
+
+  .ds-join-now-message .fa-warning {
+    color: #cc3e4a;
+  }
+
+  .ds-join-now-message .fa-check {
+    color: 33adff;
+  }
+
+/* 20. CONTACT */
+
+  .contact {
+    background-color: #fff;
+    padding: 80px 0;
+  }
+
+  .ds-contact h4 {
+    text-transform: uppercase;
+  }
+
+  .ds-contact p {
+    margin: 0;
+  }
+
+/* FOOTER */
+
+  .footer {
+    background-color: #000;
+    padding: 20px 0;
+  }
+
+  .ds-footer-copyrights{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .ds-footer-copyrights p {
+    font-size: 0.9em;
+    margin: 0;
+    color: #fff;
+  }
+
+  .ds-footer-copyrights a {
+    color: #747d93;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .ds-footer-copyrights a:hover {
+    color: #f2f3f7;
+  }
+
+  .ds-footer-contact{
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+  }
+  .ds-footer-contact h4{
+    margin-right: 5px;
+    display: inline-block;
+  }
+  .ds-footer-contact p{
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+/* 22. BREAKPOINTS */
+
+  @media (max-width: 1199px) {
+
+    /* 11. SUBSCRIBE */
+
+    .ds-subscribe-title {
+      text-align: center;
+    }
+
+    .ds-subscribe-title h3 {
+      font-size: 2.5em;
+    }
+    
+    .ds-button-left{
+        margin-left: 20px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+
+    /* 6. PRODUCT */
+    
+    .ds-product {
+      margin-top: 40px;
+    }
+
+    /* / 8. ICONS / */
+
+    .ds-icon-box-three,
+    .ds-icon-box-four {
+      margin-top: 20px;
+    }
+
+  }
+
+  @media (max-width: 991px) {
+
+    /* / 6. PRODUCT / */
+    
+    .ds-product-button-left, .ds-product-button-right {
+      height: auto;
+    }
+
+    .product-right .ds-product-image {
+      margin-top: 40px;
+    }
+
+    /* / 13. PHOTOS / TEXTS / */
+
+    .ds-photos-texts h3 {
+      margin: 0;
+    }
+
+    /* / 14. PRICING TABLE / */
+
+    .ds-pricing-table-normal {
+      width: 75%;
+      margin: 0 auto;
+    }
+
+    .ds-pricing-table-normal > div {
+      margin-top: 0;
+    }
+
+    .ds-pricing-table-normal {
+      margin-top: 40px;
+    }
+
+    .ds-pricing-table-normal:first-child {
+      margin-top: 0;
+    }
+
+    /* / 17. TEAM / */
+
+    .ds-team-person div p {
+      font-size: 0.85em;
+    }
+
+    /* / 18. PROJECTS / */
+
+    .ds-projects .row {
+      margin-bottom: 0;
+    }
+
+    .ds-projects .row > div {      
+      margin: 15px 0;
+    }
+
+  }
+
+  @media (max-width: 767px) {
+	  
+    .orcamento{
+      display: flex;
+      flex-direction: column;
+    }
+    .calc{
+      margin-right: 0;
+      margin-bottom: 60px;
+    }
+    .cont{
+      margin-left: 0;
+    }
+	  .ds-join-now-form input[type="text"],
+    .ds-join-now-form input[type="submit"],
+    .ds-join-now-form input[type="tel"],
+    .ds-join-now-form input[type="email"],
+    .ds-join-now-form input[type="number"]{
+		  margin-top: 20px;
+	  }
+	.ds-contact h4{
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	
+	.ds-contact p{
+		text-align: center;
+	}
+	
+	.ds-footer-socials ul{
+		text-align: center;
+	}
+    /* / 5. HEADER / */
+
+    /* .ds-logo,
+    .ds-text-button {
+      
+    } */
+    
+     .ds-text-button {
+    display: none;
+  }
+  
+  #cd-menu-trigger{
+      padding-left: 50px;
+  }
+
+    .ds-text-button {
+      margin-top: 50px;
+    }
+
+    .ds-title h1,
+    .ds-title-paragraph p {
+      padding: 0 20px;
+    }
+
+    .ds-button-right {
+      margin-top: 20px;
+    }
+
+    /* / 6. PRODUCT / */
+    
+    .ds-product {
+      margin-top: 40px;
+    }
+
+    /* / 8. ICONS / */
+
+    .ds-icon-box:first-child > div {
+      margin-top: 0;
+    }
+
+    .ds-icon-box > div {
+      width: 90%;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .ds-icon-box span {
+      font-size: 6em;
+    }
+
+    .ds-icon-box h4 {
+      font-size: 1.5em;
+      padding: 0 20px;
+    }
+
+    .ds-icon-box p {
+      font-size: 1em;
+      padding: 0 20px;
+    }
+
+    /* / 11. SUBSCRIBE / */
+
+    .ds-subscribe-form input[type=text],
+    .ds-subscribe-form input[type=submit] {
+      margin-top: 20px;
+    }
+
+    .ds-subscribe-form input[type=text] {
+      width: 90%;
+      margin-right: 0;
+    }
+
+    /* / 13. PHOTOS / TEXTS / */
+
+    .ds-photos-texts-image-right {
+      margin-top: 30px;
+    }
+
+    /* / 15. JOIN NOW / */
+
+    .ds-join-now-form input[type=text],
+    .ds-join-now-form input[type=number],
+    .ds-join-now-form input[type=tel],
+    .ds-join-now-form input[type=email]{
+      width: 90%;
+      margin-bottom: 20px;
+      margin-right: 0;
+    }
+
+    /* / 17. TEAM / */
+
+    .ds-team .row {
+      margin-bottom: 0;
+    }
+
+    .ds-team .row > div {      
+      margin: 15px 0;
+    }
+  }
+
+  @media(max-width: 400px){
+    .ds-logo-1x{
+      display: none;
+    }
+    .ds-logo-2x{
+      display: block;
+    }
+  }
